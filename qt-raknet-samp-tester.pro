@@ -18,8 +18,11 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-LIBS += -L$$PWD/RakNet/lib -lRakNetDLL
-#INCLUDEPATH += $$PWD/RakNet/lib
+LIBS += -L$$PWD/RakNet/lib -lraknet
+INCLUDEPATH += $$PWD/RakNet/includes
+INCLUDEPATH += $$PWD/RakNet/src
+LIBS += -lws2_32
+LIBS += -lcomctl32
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
